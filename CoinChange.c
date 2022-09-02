@@ -23,11 +23,12 @@ int combinations(int coinPosition, int rest){
         combinations(coinPosition + 1, 0);
         return 0;
     } 
-    if(coinPosition >= MAX_SIZE){
+    else if(coinPosition >= MAX_SIZE){
         for(int i = 0; i < MAX_SIZE; i++){
             printf("%d ", comb[i]);
         }
         printf("\n");
+        return 0;
     } else {
         for(int i = 0; i <= rest/coins[coinPosition]; i++){
             comb[coinPosition] = i;
